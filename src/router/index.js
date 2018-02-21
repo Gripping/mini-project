@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import FrontPage from '@/components/FrontPage'
 import CategoryPage from '@/components/CategoryPage'
 import SinglePage from '@/components/SinglePage'
+import ContactPage from '@/components/ContactPage'
 
 Vue.use(Router)
 
@@ -19,9 +20,14 @@ export default new Router({
       component: CategoryPage
     },
     {
-      path: '/SinglePage',
-      name: 'SnglePage',
+      path: '/SinglePage/:id',
+      name: 'SinglePage',
       component: SinglePage
+    },
+    {
+      path: '/ContactPage/',
+      name: 'ContactPage',
+      component: ContactPage
     }
   ]
 })
