@@ -1,0 +1,57 @@
+/* Colors */
+$lightblue: #33d0de;
+$white: #ffffff;
+$charcoal: #333333;
+$lightgray: #f6f6f6;
+$gray: #dcdcdc;
+$f-gray: #929292;
+
+/* Fonts */
+
+html {
+  font-size: 14px;
+}
+
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
+$f-xs: 0.625rem;
+$f-s: 0.875rem;
+$f-n: 1rem;
+$f-l: 1.225rem;
+$f-xl: 1.35rem;
+$f-xxl: 2rem;
+
+
+/* buttons */
+
+.primary-button {
+  width: 280px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $white;
+  border: 1px solid $white;
+  box-sizing: border-box;
+  transition: all .2s ease-in-out;
+
+  &:hover {
+    background-color: $white;
+    color: $lightblue;
+  }
+}
+
+.secondary-button {
+  @extend .primary-button;
+  color: $charcoal;
+  border: 2px solid $charcoal;
+
+  &:hover {
+    background-color: $charcoal !important;
+    color: $white;
+  }
+}
