@@ -1,0 +1,18 @@
+$mobile: 320px;
+$lMobile: 550px;
+$vTablet: 780px;
+
+@media only screen and (max-width: $lMobile) {
+  .container {
+    width: 100%;
+  }
+  
+  .cta-section {
+      grid-template-columns: unset;
+      grid-template-rows: 1fr 1fr 1fr;
+  }
+}
+
+@media only screen and (min-width: $lMobile) and (max-width: $vTablet) {
+
+}
