@@ -109,7 +109,7 @@ export default {
         slidesToScroll: 1,
         arrows: true,
         adaptiveHeight: true,
-        asNavFor: '.slider-nav'
+        asNavFor: '.slider-nav',
       }
     }
   },
@@ -167,99 +167,5 @@ export default {
 </script>
 <style lang="scss" scoped>
   @import '.././assets/styles/base';
-  .product-image {
-    justify-content: center;
-    align-items: center;
-
-    .product-image__img {
-
-      .slider-nav {
-        position: relative;
-      }
-
-      .slider-for {
-        position: relative;
-        width: 100%;
-        max-height: 660px;
-        overflow: hidden;
-      }
-
-      .slick-list {
-        overflow: hidden;
-        height: 100%;
-
-        .slick-track {
-          display: flex;
-          flex-direction: row;
-          .slick-slide {
-            z-index: 1 !important;
-          }
-        }
-      }
-
-      .slick-list {
-        overflow: hidden;
-        width: 100%;
-      }
-
-      .slick-dots {
-        position: absolute;
-        bottom: 35px;
-        left: 50%;
-        transform: translateX(-50%);
-        list-style: none;
-        padding: 0px;
-        margin: 0px;
-
-        li {
-          float: left;
-        }
-      }
-
-      .slick-arrow {
-        position: absolute;
-        z-index: 20;
-        top: 50% !important;
-        transform: translateY(-50%);
-
-        &.slick-prev {
-          left: 20px;
-          top: 0px;
-        }
-        &.slick-next {
-          right: 20px;
-          top: 0px;
-        }
-      }
-    }
-
-    .product-image__thumbnails {
-      .slider-nav {
-
-        .slick-list {
-          overflow: hidden;
-          width: 100%;
-          padding: 0px !important;
-
-          .slick-slide {
-            margin: 15px 0px;
-            user-select: none;
-            cursor: pointer;
-            transition: all .3s ease-in-out;
-
-            &.slick-current{
-                -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.56);
-                -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.56);
-                box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.56);
-            }
-
-            &:nth-of-type(1) {
-              margin: 0px;
-            }
-          }
-        }
-      }
-    }
-  }
 
 </style>
