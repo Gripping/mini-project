@@ -62,7 +62,6 @@ export default {
         hamburger.classList += ' nav--active';
         body.classList += ' nav--active';
       }else{
-        console.log("test");
         nav.classList.remove('nav--active');
         hamburger.classList.remove('nav--active');
         body.classList.remove('nav--active');
