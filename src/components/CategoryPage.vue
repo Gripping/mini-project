@@ -10,7 +10,7 @@
       </section>
       <span class="products-controller container">
         <ul class="products-controller__list">
-          New collection (1-32 of 58)
+          <span>New collection (1-32 of 58)</span>
           <li class="product-controller"><a href="#">Sort by</a></li>
           <li class="product-controller"><a href="#">Features</a></li>
           <li class="product-controller"><a href="#">Size</a></li>
