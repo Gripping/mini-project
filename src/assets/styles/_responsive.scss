@@ -6,10 +6,301 @@ $vTablet: 780px;
   .container {
     width: 100%;
   }
-  
+
+  body {
+    &.nav--active {
+      .nav-header {
+        width: 100%;
+        justify-content: flex-end;
+      }
+    }
+  }
+
+  .banner-slider {
+    margin-top: 35px;
+
+    .slick-dots {
+      justify-content: flex-start;
+      padding-left: 5%;
+    }
+
+    .primary-button {
+      width: 220px;
+      font-size: $f-s;
+      font-weight: bold;
+      bottom: 1%;
+      border-width: 2px;
+
+    }
+  }
+
+  .nav-header {
+    padding: 0px 10px;
+    height: 35px;
+    background-color: $charcoal;
+    &__logo {
+      display: none;
+    }
+    justify-content: flex-end;
+    .user-links {
+      z-index: 200;
+    }
+  }
+
   .cta-section {
       grid-template-columns: unset;
       grid-template-rows: 1fr 1fr 1fr;
+
+      &__newsletter {
+        transform: scale(1);
+      }
+  }
+
+  .cta-sales {
+    grid-template-columns: unset;
+    grid-template-rows: 1fr auto auto;
+    grid-template-areas:
+    "big"
+    "small-1"
+    "small-2";
+  }
+
+  .featured-products__controller {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    .product__controller {
+      margin-right: 0px;
+    }
+  }
+
+  .products-list {
+    grid-template-columns: minmax(200px, 3fr);
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .sale-collection {
+    &__title {
+      font-size: $f-xl;
+      span {
+        margin: 0px;
+        width: 100px;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 20px;
+        margin-right: 20px;
+
+        img {
+          padding: 0px;
+          height: 70%;
+          right: -5px;
+          width: auto;
+        }
+      }
+    }
+  }
+
+  .social-media__list {
+    display: grid;
+    grid-template-columns: repeat(4, 3fr);
+    grid-gap: 20px;
+
+    .media {
+      margin-right: 0px;
+    }
+  }
+
+  .main-footer {
+    grid-template-columns: unset;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas:
+    "questions"
+    "location"
+    "about"
+    "payment"
+    "logo";
+    height: auto;
+    padding-top: 20px;
+
+    div {
+      width: 50%;
+      text-align: center;
+    }
+  }
+
+  .newsletter-form {
+    display: flex;
+    flex-direction: column;
+  }
+  .collection-banner {
+    margin-top: 45px;
+    &__img {
+      display: none;
+    }
+    &__text {
+      color: $charcoal;
+      position: relative;
+
+      .cta-text {
+        padding: 0 20px;
+        grid-template-columns: 3fr 6fr 3fr;
+        &:before,
+        &:after {
+          background-color: $charcoal;
+          height: 2px;
+        }
+      }
+      .collection {
+        font-size: 2.8rem;
+      }
+      .primary-button {
+        border-color: $charcoal;
+        color: $charcoal;
+        &:hover {
+          background-color: $charcoal;
+          color: $white;
+        }
+      }
+    }
+  }
+  .products-controller__list {
+    flex-flow: row wrap;
+    padding-left: 20px;
+    padding-right: 20px;
+    span {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    .product-controller {
+      margin-bottom: 10px;
+      &:nth-of-type(1) {
+        margin-left: 0px;
+      }
+    }
+  }
+  .product-banner {
+    margin-top: 35px;
+  }
+
+  .product-container {
+    grid-template-columns: unset;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+    "image"
+    "product"
+    "flavour";
+    grid-gap: 0px;
+    width: 100%;
+
+    .product-image {
+      grid-gap: 0px;
+      grid-template-columns: 2fr 10fr;
+      grid-template-areas:
+      "img img";
+      max-height: 500px;
+
+      &__thumbnails {
+        display: none;
+        grid-area: unset;
+      }
+
+      &__img {
+        max-height: 500px;
+        overflow: hidden;
+
+        div {
+          max-height: 500px;
+        }
+
+
+        .slider-for {
+          height: 100%;
+          .slick-list {
+            height: 100% !important;
+          }
+        }
+      }
+    }
+    .product {
+      padding: 0px 20px;
+      margin-top: -50px;
+    }
+    .product-flavour {
+      padding: 0px 20px;
+
+      &__text {
+        width: 100%;
+      }
+    }
+  }
+  .product-extra {
+    &__item {
+      flex-direction: column;
+      max-height: none;
+
+      &.item--reversed {
+        flex-direction: column;
+      }
+
+      .extra-img {
+        width: 100%;
+      }
+      .extra-content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 40px 80px;
+
+        &__list {
+          .content-list__item {
+            margin-right: 10px;
+          }
+        }
+
+        &__button {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .contact-page {
+    &__banner {
+      margin-top: 45px;
+      .page-banner__img {
+        display: none;
+      }
+
+      .page-banner__title {
+        position: relative;
+        color: $charcoal;
+        bottom: 0;
+        margin-top: 50px;
+
+        &:before,
+        &:after {
+          background-color: $charcoal;
+        }
+      }
+    }
+    .contact-form {
+      margin-top: 50px;
+      width: 100%;
+      &__border {
+        div {
+          flex-direction: column;
+          align-items: center;
+          label:nth-of-type(1) {
+            margin-bottom: 25px;
+          }
+        }
+      }
+    }
   }
 }
 
