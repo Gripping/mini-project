@@ -11,25 +11,25 @@
           <p class="contact-form__text">And we'll get back to you!</p>
           <div class="contact-form__name">
             <label class="contact-first_name" for="first_name">
-              <input v-validate="'required|aplha'" :class="{'input': true, 'is-danger': errors.has('first_name') }" name="first_name" type="text" placeholder="First name">
+              <input v-validate="'required|alpha'" :class="{'input': true, 'is-danger': errors.has('first_name') }" name="first_name" type="text" placeholder="First name">
               <span v-show="errors.has('first_name')" class="help is-danger">First name is a required field</span>
             </label>
 
             <label class="contact-last_name" for="first_name">
-              <input v-validate="'required|aplha'" :class="{'input': true, 'is-danger': errors.has('first_name') }" name="first_name" type="text" placeholder="Last name">
-              <span v-show="errors.has('first_name')" class="help is-danger">Last name is a required field</span>
+              <input v-validate="'required|alpha'" :class="{'input': true, 'is-danger': errors.has('last_name') }" name="last_name" type="text" placeholder="Last name">
+              <span v-show="errors.has('last_name')" class="help is-danger">Last name is a required field</span>
             </label>
           </div>
 
           <div class="contact-form__contact">
             <label class="contact-email" for="first_name">
-              <input v-validate="'required|aplha'" :class="{'input': true, 'is-danger': errors.has('first_name') }" name="first_name" type="text" placeholder="Email">
-              <span v-show="errors.has('first_name')" class="help is-danger">Email is a required field</span>
+              <input v-validate="'required|email'" :class="{'input': true, 'is-danger': errors.has('first_name') }" name="email" type="email" placeholder="Email">
+              <span v-show="errors.has('email')" class="help is-danger">Email is a required field</span>
             </label>
 
             <label class="contact-phone" for="first_name">
-              <input v-validate="'required|aplha'" :class="{'input': true, 'is-danger': errors.has('first_name') }" name="first_name" type="text" placeholder="Phone">
-              <span v-show="errors.has('first_name')" class="help is-danger">Phone is a required field</span>
+              <input v-validate="'required|numeric'" :class="{'input': true, 'is-danger': errors.has('phone') }" name="phone" type="text" placeholder="Phone">
+              <span v-show="errors.has('phone')" class="help is-danger">Phone is a required field</span>
             </label>
           </div>
 

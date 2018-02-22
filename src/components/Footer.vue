@@ -22,7 +22,7 @@
       <img src="/static/img/payment.png" alt="">
     </div>
     <div class="main-footer__logo">
-      <img src="/static/img/logo.svg" alt="">
+      <router-link to="/"><img src="/static/img/logo.svg" alt=""></router-link>
     </div>
   </footer>
 </template>

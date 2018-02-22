@@ -5,6 +5,7 @@
       </section>
       <section class="product-container container">
         <div class="product-image">
+          <span class="saveForLater"><img src="/static/img/icons/heart-border.svg" alt=""></span>
           <div class="product-image__thumbnails">
             <slick class="slider-nav" ref="slick" :options="slickNav">
               <img v-for="(item, index) in product.pictures" :src="item">
@@ -27,8 +28,8 @@
             <form class="product-options">
                 <v-select v-model="selected" :placeholder="product.color[0]" :options="product.color"></v-select>
                 <v-select v-model="selected" placeholder="Select Size" :options="product.size"></v-select>
-                <button class="product-options__submit" type="submit" name="button"><img src="/static/img/icons/fullWhite-cart.svg" alt="">Add to bag</button>
-                <router-link class="product-options__save" to="">Save for later</router-link>
+                <button class="product-options__submit" type="submit" name="button"><img src="/static/img/icons/fullWhite-cart.svg" alt="">Add to bag</button><a href="#"class="size"><img src="/static/img/icons/size.png" alt="">Size Guide</a>
+                <router-link class="product-options__save" to="">Save for later</router-link><a href="#" class="share"><img src="/static/img/icons/share.svg" alt="">Share this product</a>
             </form>
 
           </div>
@@ -165,7 +166,3 @@ export default {
   }
 }
 </script>
-<style lang="scss" scoped>
-  @import '.././assets/styles/base';
-
-</style>

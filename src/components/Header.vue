@@ -69,6 +69,14 @@ export default {
     }
   }
 }
+window.onscroll = function() {
+  var nav = document.querySelector('.nav-header');
+  if ( window.pageYOffset > 300) {
+      nav.classList.add("scroll--active");
+  } else {
+      nav.classList.remove("scroll--active");
+  }
+}
 </script>
 <style lang="scss">
 

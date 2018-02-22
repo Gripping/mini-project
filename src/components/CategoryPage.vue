@@ -65,7 +65,6 @@ export default {
         .get("/static/products.json")
         .then(response => {
           this.products = response.data;
-          console.log(this.products);
         })
         .catch(error => {
           console.log(error);

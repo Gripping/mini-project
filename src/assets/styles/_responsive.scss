@@ -229,6 +229,18 @@ $vTablet: 780px;
     .product {
       padding: 0px 20px;
       margin-top: -50px;
+
+      .product-options {
+          grid-template-columns: 270px;
+          grid-template-rows: 40px 40px auto auto auto auto;
+          grid-template-areas:
+          "color"
+          "size"
+          "size-btn"
+          "submit"
+          "save"
+          "share-btn";
+      }
     }
     .product-flavour {
       padding: 0px 20px;
