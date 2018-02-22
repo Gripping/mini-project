@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper">
       <section class="banner-slider">
-        <slick class="slick-for" ref="slick" :options="slickOptions">
+        <slick class="slick-for" v-model="test" ref="slick" :options="slickOptions">
           <div class="banner-slider__slide">
             <img class="banner-img" src="/static/img/slider/banner-1.jpg" alt="">
             <a class="banner-button primary-button" href="#">Learn more about great deals</a>
@@ -151,6 +151,7 @@ export default {
     return {
         products: '',
         collection: '',
+        test: '',
         slickOptions: {
           slidesToShow: 1,
           infinite: true,
@@ -159,7 +160,21 @@ export default {
           swipe: true,
           dots: true,
           autoplay: true,
-          autoplaySpeed: 3000
+          pauseOnHover: false,
+          responsive: [
+            {
+              breakpoint: 600,
+              settings: {
+                arrows: false
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                arrows: false
+              }
+            }
+          ]
         },
         slickBrands: {
           slidesToShow: 5,
@@ -170,7 +185,23 @@ export default {
           swipe: true,
           dots: true,
           autoplay: true,
-          autoplaySpeed: 5000
+          autoplaySpeed: 5000,
+          responsive: [
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2
+              }
+            }
+          ]
         },
         slickReviews: {
           slidesToShow: 1,
@@ -185,6 +216,11 @@ export default {
   },
   created: function() {
     this.FetchProducts();
+  },
+  watch: {
+    'this.$refs.slick.onBeforeChange': function(event) {
+
+    }
   },
   // All slick methods can be used too, example here
   methods: {
@@ -230,10 +266,10 @@ export default {
           this.$refs.slick.prev();
       },
       reInit() {
-          // Helpful if you have to deal with v-for to update dynamic lists
-          this.$nextTick(() => {
-              this.$refs.slick.reSlick();
-          });
+        // Helpful if you have to deal with v-for to update dynamic lists
+        this.$nextTick(() => {
+            this.$refs.slick.reSlick();
+        });
       }
   }
 }
